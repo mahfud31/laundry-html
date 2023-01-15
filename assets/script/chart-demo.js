@@ -11,12 +11,25 @@ $(function () {
   var mode = "index";
   var intersect = true;
 
-  var $salesChart = $("#grafikTransaksi");
+  var $salesChart = $("#grafikPendapatan");
   // eslint-disable-next-line no-unused-vars
   var salesChart = new Chart($salesChart, {
     type: "bar",
     data: {
-      labels: ["JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"],
+      labels: [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MEI",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+      ],
       datasets: [
         {
           backgroundColor: "#007bff",
@@ -64,7 +77,7 @@ $(function () {
                     value += "k";
                   }
 
-                  return "$" + value;
+                  return "Rp" + value;
                 },
               },
               ticksStyle
@@ -84,15 +97,39 @@ $(function () {
     },
   });
 
-  var $visitorsChart = $("#grafikPendapatan");
+  var $visitorsChart = $("#grafikTransaksi");
   // eslint-disable-next-line no-unused-vars
   var visitorsChart = new Chart($visitorsChart, {
     data: {
-      labels: ["18th", "20th", "22nd", "24th", "26th", "28th", "30th"],
+      labels: [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+      ],
       datasets: [
         {
           type: "line",
-          data: [100, 120, 170, 167, 180, 177, 160],
+          data: [
+            100, 120, 170, 167, 180, 177, 160, 100, 120, 170, 60, 80, 70, 67,
+            80, 77, 100, 60, 80, 70,
+          ],
           backgroundColor: "transparent",
           borderColor: "#007bff",
           pointBorderColor: "#007bff",
@@ -103,7 +140,10 @@ $(function () {
         },
         {
           type: "line",
-          data: [60, 80, 70, 67, 80, 77, 100],
+          data: [
+            60, 80, 70, 67, 80, 77, 100, 60, 80, 70, 100, 120, 170, 167, 180,
+            177, 160, 100, 120, 170,
+          ],
           backgroundColor: "tansparent",
           borderColor: "#ced4da",
           pointBorderColor: "#ced4da",
@@ -150,7 +190,7 @@ $(function () {
           {
             display: true,
             gridLines: {
-              display: false,
+              // display: false,
             },
             ticks: ticksStyle,
           },
