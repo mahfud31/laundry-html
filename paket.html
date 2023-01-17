@@ -64,14 +64,14 @@
             </div>
             <div class="list-group list-group-flush">
               <a
-                href="dashboard.html"
-                class="list-group-item list-group-item-action active"
+                href="/dashboard.html"
+                class="list-group-item list-group-item-action"
               >
                 <i class="fas fa-tachometer-alt"></i> Dashboard
               </a>
               <a
                 href="paket.html"
-                class="list-group-item list-group-item-action"
+                class="list-group-item list-group-item-action active"
               >
                 <i class="fas fa-th-list"></i> Paket
               </a>
@@ -105,82 +105,91 @@
           <!-- header -->
           <div class="container-fluid">
             <div class="dashboard-heading">
-              <h2 class="dashboard-title">Dashboard</h2>
+              <h2 class="dashboard-title">Paket</h2>
             </div>
           </div>
+
           <!-- content -->
           <div class="container-fluid">
             <div class="dashboard-content px-3 mt-4 mt-lg-5">
-              <!-- section info -->
-              <div class="row text-light">
-                <div class="col-6 col-lg-3">
-                  <div class="card mb-2 bg-primary">
-                    <div class="card-body">
-                      <div class="box-info">
-                        <div class="card-info-title">Total Transaksi</div>
-                        <div class="card-info-subtitle">30</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6 col-lg-3">
-                  <div class="card mb-2 bg-info">
-                    <div class="card-body">
-                      <div class="card-info-title">Dalam Proses</div>
-                      <div class="card-info-subtitle">8</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6 col-lg-3">
-                  <div class="card mb-2 bg-danger">
-                    <div class="card-body">
-                      <div class="card-info-title">Siap Diambil</div>
-                      <div class="card-info-subtitle">12</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6 col-lg-3">
-                  <div class="card mb-2 bg-success">
-                    <div class="card-body">
-                      <div class="card-info-title">Sudah Diambil</div>
-                      <div class="card-info-subtitle">10</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- section chart -->
               <div class="row">
-                <div class="col-12 mt-4">
+                <!-- card-left -->
+                <div class="col-12 col-md-3">
                   <div class="card">
-                    <div class="card-header bg-body-secondary">
-                      <h5 class="card-title m-0">Grafik Transaksi</h5>
-                    </div>
-                    <div class="card-body bg-body-tertiary">
-                      <div class="chart">
-                        <!-- Sales Chart Canvas -->
-                        <canvas
-                          id="grafikTransaksi"
-                          height="180"
-                          style="height: 220px"
-                        ></canvas>
-                      </div>
+                    <div class="card-body">
+                      <h5>Tambah Kategori</h5>
+                      <form action="#" method="post" class="mt-5">
+                        <div class="col-12 mb-3">
+                          <label for="name" class="form-label">Nama</label>
+                          <input type="text" class="form-control" id="name" />
+                        </div>
+                        <div class="col-12 mb-3">
+                          <label for="duration" class="form-label"
+                            >Waktu Pengerjaan</label
+                          >
+                          <div class="input-group">
+                            <input
+                              type="number"
+                              class="form-control"
+                              id="duration"
+                              aria-label="durasi"
+                              aria-describedby="waktu-pengerjaan"
+                            />
+                            <span class="input-group-text" id="waktu-pengerjaan"
+                              >per Kg</span
+                            >
+                          </div>
+                        </div>
+                        <div class="col-12 mb-5">
+                          <label for="formFile" class="form-label">Foto</label>
+                          <input
+                            class="form-control"
+                            type="file"
+                            id="formFile"
+                          />
+                        </div>
+                        <div class="col-12 mb-3 text-end">
+                          <button class="btn btn-primary" type="submit">
+                            <i class="fa fa-paper-plane"></i> Tambah
+                          </button>
+                        </div>
+                      </form>
                     </div>
                   </div>
                 </div>
-                <div class="col-12 mt-4">
+                <!-- card-right -->
+                <div class="col-12 col-md-9">
                   <div class="card">
-                    <div class="card-header bg-body-secondary">
-                      <h5 class="card-title m-0">Grafik Pendapatan</h5>
-                    </div>
-                    <div class="card-body bg-body-tertiary">
-                      <div class="chart">
-                        <!-- Sales Chart Canvas -->
-                        <canvas
-                          id="grafikPendapatan"
-                          height="180"
-                          style="height: 220px"
-                        ></canvas>
-                      </div>
+                    <div class="card-body">
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Nama</th>
+                            <th scope="col">Pengerjaan</th>
+                            <th scope="col">Aksi</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>

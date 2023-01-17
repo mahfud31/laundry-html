@@ -24,7 +24,6 @@ body .page-content .navbar-page {
 @media (min-width: 768px) {
   body .page-content .navbar-page {
     margin-left: 220px;
-    padding-top: 0;
     margin-top: -2px;
     background-color: transparent;
     box-shadow: none;
