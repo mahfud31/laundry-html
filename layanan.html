@@ -71,13 +71,13 @@
               </a>
               <a
                 href="paket.html"
-                class="list-group-item list-group-item-action active"
+                class="list-group-item list-group-item-action"
               >
                 <i class="fas fa-th-list"></i> Paket
               </a>
               <a
                 href="layanan.html"
-                class="list-group-item list-group-item-action"
+                class="list-group-item list-group-item-action active"
               >
                 <i class="fas fa-boxes"></i> Layanan
               </a>
@@ -114,7 +114,7 @@
           <!-- header -->
           <div class="container-fluid">
             <div class="dashboard-heading">
-              <h2 class="dashboard-title">Paket</h2>
+              <h2 class="dashboard-title">Layanan</h2>
             </div>
           </div>
 
@@ -126,36 +126,39 @@
                 <div class="col-12 col-lg-3 d-none d-lg-block">
                   <div class="card">
                     <div class="card-body">
-                      <h5>Tambah paket</h5>
+                      <h5>Tambah Layanan</h5>
                       <form action="#" method="post" class="row mt-4">
                         <div class="col-12 mb-3">
-                          <label for="name" class="form-label">Nama :</label>
-                          <input type="text" class="form-control" id="name" />
+                          <label for="paket" class="form-label">Paket :</label>
+                          <select
+                            class="form-select"
+                            id="paket"
+                            aria-label="Default select example"
+                          >
+                            <option selected class="d-none">pilih paket</option>
+                            <option value="reguler">Reguler</option>
+                            <option value="express">Express</option>
+                            <option value="karpet">Karpet</option>
+                          </select>
                         </div>
                         <div class="col-12 mb-3">
-                          <label for="duration" class="form-label"
-                            >Waktu Pengerjaan :</label
+                          <label for="name" class="form-label"
+                            >Nama Layanan :</label
                           >
+                          <input type="text" class="form-control" id="name" />
+                        </div>
+                        <div class="col-12 mb-4">
+                          <label for="price" class="form-label">Harga :</label>
                           <div class="input-group">
                             <input
                               type="number"
                               class="form-control text-center"
-                              id="duration"
-                              aria-label="durasi"
-                              aria-describedby="waktu-pengerjaan"
+                              id="price"
+                              aria-label="harga"
+                              aria-describedby="harga"
                             />
-                            <span class="input-group-text" id="waktu-pengerjaan"
-                              >Hari</span
-                            >
+                            <span class="input-group-text" id="harga">/KG</span>
                           </div>
-                        </div>
-                        <div class="col-12 mb-4">
-                          <label for="formFile" class="form-label">Foto</label>
-                          <input
-                            class="form-control"
-                            type="file"
-                            id="formFile"
-                          />
                         </div>
                         <div class="col-12 text-end">
                           <button class="btn btn-primary" type="submit">
@@ -177,16 +180,18 @@
                           <thead>
                             <tr>
                               <th scope="col">No</th>
-                              <th scope="col">Nama</th>
-                              <th scope="col">Pengerjaan</th>
+                              <th scope="col">paket</th>
+                              <th scope="col">Layanan</th>
+                              <th scope="col">harga</th>
                               <th scope="col">Aksi</th>
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
                               <th scope="row">1</th>
-                              <td>expres</td>
-                              <td>1 Hari</td>
+                              <td>Express</td>
+                              <td>cuci setrika</td>
+                              <td>Rp. 10.000</td>
                               <td>
                                 <div class="btn-group">
                                   <button
@@ -204,8 +209,9 @@
                             </tr>
                             <tr>
                               <th scope="row">2</th>
-                              <td>Reguler</td>
-                              <td>2 Hari</td>
+                              <td>Express</td>
+                              <td>cuci kering</td>
+                              <td>Rp. 5000</td>
                               <td>
                                 <div class="btn-group">
                                   <button
@@ -223,8 +229,9 @@
                             </tr>
                             <tr>
                               <th scope="row">3</th>
-                              <td>Karpet</td>
-                              <td>5 Hari</td>
+                              <td>Reguler</td>
+                              <td>cuci setrika</td>
+                              <td>Rp. 5000</td>
                               <td>
                                 <div class="btn-group">
                                   <button
@@ -242,8 +249,9 @@
                             </tr>
                             <tr>
                               <th scope="row">4</th>
-                              <td>expres</td>
-                              <td>1 Hari</td>
+                              <td>Reguler</td>
+                              <td>cuci kering</td>
+                              <td>Rp. 2500</td>
                               <td>
                                 <div class="btn-group">
                                   <button
@@ -261,8 +269,29 @@
                             </tr>
                             <tr>
                               <th scope="row">5</th>
+                              <td>Karpet</td>
+                              <td>cuci kering</td>
+                              <td>Rp. 100.000</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button
+                                    class="btn btn-sm mx-1 rounded btn-warning"
+                                  >
+                                    <i class="fas fa-edit"></i>
+                                  </button>
+                                  <button
+                                    class="btn btn-sm mx-1 rounded btn-danger"
+                                  >
+                                    <i class="fas fa-trash"></i>
+                                  </button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">6</th>
                               <td>Reguler</td>
-                              <td>2 Hari</td>
+                              <td>1set BC</td>
+                              <td>Rp. 60.000</td>
                               <td>
                                 <div class="btn-group">
                                   <button
@@ -288,36 +317,39 @@
                 <div class="col-12 col-lg-3 d-lg-none">
                   <div class="card">
                     <div class="card-body">
-                      <h5>Tambah Kategori</h5>
+                      <h5>Tambah Layanan</h5>
                       <form action="#" method="post" class="row mt-4">
                         <div class="col-12 mb-3">
-                          <label for="name" class="form-label">Nama</label>
-                          <input type="text" class="form-control" id="name" />
+                          <label for="paket" class="form-label">Paket</label>
+                          <select
+                            class="form-select"
+                            id="paket"
+                            aria-label="Default select example"
+                          >
+                            <option selected class="d-none">pilih paket</option>
+                            <option value="reguler">Reguler</option>
+                            <option value="express">Express</option>
+                            <option value="karpet">Karpet</option>
+                          </select>
                         </div>
                         <div class="col-12 mb-3">
-                          <label for="duration" class="form-label"
-                            >Waktu Pengerjaan</label
+                          <label for="name" class="form-label"
+                            >Nama Layanan</label
                           >
+                          <input type="text" class="form-control" id="name" />
+                        </div>
+                        <div class="col-12 mb-4">
+                          <label for="price" class="form-label">Harga</label>
                           <div class="input-group">
                             <input
                               type="number"
                               class="form-control text-center"
-                              id="duration"
-                              aria-label="durasi"
-                              aria-describedby="waktu-pengerjaan"
+                              id="price"
+                              aria-label="harga"
+                              aria-describedby="harga"
                             />
-                            <span class="input-group-text" id="waktu-pengerjaan"
-                              >Hari</span
-                            >
+                            <span class="input-group-text" id="harga">/KG</span>
                           </div>
-                        </div>
-                        <div class="col-12 mb-4">
-                          <label for="formFile" class="form-label">Foto</label>
-                          <input
-                            class="form-control"
-                            type="file"
-                            id="formFile"
-                          />
                         </div>
                         <div class="col-12 text-end">
                           <button class="btn btn-primary" type="submit">

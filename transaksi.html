@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="/assets/plugins/bootstrap-5.3.0/css/bootstrap.min.css"
+    />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- custom style -->
+    <link rel="stylesheet" href="/assets/style/style.css" />
+    <title>Laundyku | Dashboard</title>
+  </head>
+  <body>
+    <div class="page-content">
+      <div class="" id="wrapper">
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-page">
+          <div class="container-fluid">
+            <button
+              class="btn bg-primary-subtle d-md-none me-auto ms-2"
+              id="menu-toggle"
+            >
+              <i class="fa fa-bars"></i> Menu
+            </button>
+            <div class="ms-auto me-2">
+              <!-- desktop menu -->
+              <ul class="navbar-nav d-none d-md-flex ms-auto">
+                <li class="nav-item">
+                  <a href="#" class="nav-link pb-0">
+                    <img
+                      src="/assets/images/mahfud.png"
+                      alt=""
+                      style="max-height: 45px"
+                      class="rounded-circle me-2"
+                    />
+                    Hi, Mahfud
+                  </a>
+                </li>
+              </ul>
+
+              <!-- mobile menu -->
+              <ul class="navbar-nav d-block d-md-none">
+                <li class="nav-item">
+                  <a href="#" class="nav-link"> Hi, Mahfud </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- sidebar -->
+        <div id="sidebar-wrapper">
+          <div class="sidebar pb-5 mb-4">
+            <div class="sidebar-heading text-center">
+              <img src="/assets/images/logo.png" alt="" class="my-4" />
+            </div>
+            <div class="list-group list-group-flush">
+              <a
+                href="/dashboard.html"
+                class="list-group-item list-group-item-action"
+              >
+                <i class="fas fa-tachometer-alt"></i> Dashboard
+              </a>
+              <a
+                href="paket.html"
+                class="list-group-item list-group-item-action"
+              >
+                <i class="fas fa-th-list"></i> Paket
+              </a>
+              <a
+                href="layanan.html"
+                class="list-group-item list-group-item-action"
+              >
+                <i class="fas fa-boxes"></i> Layanan
+              </a>
+              <a
+                href="transaksi-baru.html"
+                class="list-group-item list-group-item-action active"
+              >
+                <i class="fas fa-shopping-basket"></i> Transaksi Baru
+              </a>
+              <a
+                href="pengambilan.html"
+                class="list-group-item list-group-item-action"
+              >
+                <i class="fas fa-shopping-bag"></i> Pengambilan
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                <i class="fas fa-file-pdf"></i> Laporan
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                <i class="fas fa-users"></i> User
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                <i class="fas fa-cogs"></i> Setting
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- main content -->
+        <div id="main-content-wrapper" class="pb-4">
+          <!-- header -->
+          <div class="container-fluid">
+            <div class="dashboard-heading">
+              <h2 class="dashboard-title">Transaksi Baru</h2>
+            </div>
+          </div>
+
+          <!-- content -->
+          <div class="container-fluid">
+            <div class="dashboard-content px-lg-3 mt-4 mt-lg-5">
+              <h2 class="text-center">Paket Reguler</h2>
+              <form action="#" method="post" class="row">
+                <!-- card-left -->
+                <div class="col-12 col-lg-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-6 col-lg-12 mb-3">
+                          <label for="name" class="form-label"> Nama :</label>
+                          <input type="text" class="form-control" id="name" />
+                        </div>
+                        <div class="col-6 col-lg-12 mb-3">
+                          <label for="phone" class="form-label">
+                            Nomor Hp :
+                          </label>
+                          <input type="text" class="form-control" id="phone" />
+                        </div>
+                        <div class="col-12 mb-3">
+                          <label for="phone" class="form-label">
+                            Layanan :
+                          </label>
+                          <div class="text-center">
+                            <button
+                              class="btn btn-sm btn-info text-light m-1"
+                              type="submit"
+                            >
+                              cuci kering
+                            </button>
+                            <button
+                              class="btn btn-sm btn-info text-light m-2"
+                              type="submit"
+                            >
+                              cuci setrika
+                            </button>
+                            <button
+                              class="btn btn-sm btn-info text-light m-2"
+                              type="submit"
+                            >
+                              1set BC
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- card-right -->
+                <div class="col-12 col-lg-9">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="table-responsive">
+                        <table
+                          class="table table-bordered table-striped text-center align-middle"
+                        >
+                          <thead>
+                            <tr>
+                              <th scope="col">No</th>
+                              <th scope="col">Layanan</th>
+                              <th scope="col">Harga</th>
+                              <th scope="col">Berat .kg</th>
+                              <th scope="col">Subtotal</th>
+                              <th scope="col">Aksi</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">1</th>
+                              <td>cuci kering</td>
+                              <td>Rp. 10.000</td>
+                              <td>
+                                <div class="d-flex align-items-center">
+                                  <button
+                                    type="button"
+                                    class="btn btn-sm btn-danger quantity-remove quantity-button"
+                                  >
+                                    <i class="fa fa-minus"></i>
+                                  </button>
+                                  <input
+                                    type="number"
+                                    class="form-control text-center mx-2"
+                                    min="1"
+                                    value="2"
+                                  />
+                                  <button
+                                    type="button"
+                                    class="btn btn-sm btn-success quantity-add quantity-button"
+                                  >
+                                    <i class="fa fa-plus"></i>
+                                  </button>
+                                </div>
+                              </td>
+                              <td>Rp. 20.000</td>
+                              <td>
+                                <button
+                                  class="btn btn-sm mx-1 rounded btn-danger"
+                                >
+                                  <i class="fas fa-trash"></i>
+                                </button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2</th>
+                              <td>cuci setrika</td>
+                              <td>Rp. 5000</td>
+                              <td>
+                                <div class="d-flex align-items-center">
+                                  <button
+                                    type="button"
+                                    class="btn btn-sm btn-danger quantity-remove quantity-button"
+                                  >
+                                    <i class="fa fa-minus"></i>
+                                  </button>
+                                  <input
+                                    type="number"
+                                    class="form-control text-center mx-2"
+                                    min="1"
+                                    value="5"
+                                  />
+                                  <button
+                                    type="button"
+                                    class="btn btn-sm btn-success quantity-add quantity-button"
+                                  >
+                                    <i class="fa fa-plus"></i>
+                                  </button>
+                                </div>
+                              </td>
+                              <td>Rp. 25.000</td>
+                              <td>
+                                <button
+                                  class="btn btn-sm mx-1 rounded btn-danger"
+                                >
+                                  <i class="fas fa-trash"></i>
+                                </button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-5 ms-auto">
+                          <form action="" method="post">
+                            <div class="mb-3 row">
+                              <label
+                                for="total"
+                                class="col-lg-6 text-lg-end col-form-label"
+                              >
+                                Total
+                              </label>
+                              <div class="col-lg-6">
+                                <input
+                                  type="text"
+                                  class="form-control text-center"
+                                  id="total"
+                                  value="Rp. 45.000"
+                                  disabled
+                                />
+                              </div>
+                            </div>
+                            <div class="mb-3 row">
+                              <label
+                                for="status"
+                                class="col-lg-6 text-lg-end col-form-label"
+                              >
+                                Status
+                              </label>
+                              <div class="col-lg-6">
+                                <select
+                                  class="form-select text-center"
+                                  id="status"
+                                  aria-label="Default select example"
+                                >
+                                  <option value="bayar">Sudah Bayar</option>
+                                  <option value="belum">Belum Bayar</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="mb-3 row">
+                              <label
+                                for="received"
+                                class="col-lg-6 text-lg-end col-form-label"
+                              >
+                                Diterima
+                              </label>
+                              <div class="col-lg-6">
+                                <input
+                                  type="text"
+                                  class="form-control text-center"
+                                  id="received"
+                                  value="50000"
+                                />
+                              </div>
+                            </div>
+                            <div class="mb-3 row">
+                              <label
+                                for="kembalian"
+                                class="col-lg-6 text-lg-end col-form-label"
+                              >
+                                Kembali
+                              </label>
+                              <div class="col-lg-6">
+                                <input
+                                  type="text"
+                                  class="form-control text-center bg-info-subtle"
+                                  id="kembalian"
+                                  value="Rp. 5.000"
+                                  disabled
+                                />
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- save -->
+                <div class="col-12 text-center">
+                  <button class="btn btn-primary">
+                    <i class="fa fa-paper-plane"></i> Simpan
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- footer -->
+        <footer class="main-footer border-top bg-light text-secondary d-block">
+          <strong>
+            Copyright ©2023
+            <a href="https://www.instagram.com/mahfud_9.7/">el-chotibi</a>.
+          </strong>
+          All rights reserved.
+          <div class="float-end d-none d-md-inline"><b>Version</b> 1.0.0</div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- jquery -->
+    <script src="/assets/plugins/jquery-3.6.3/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="/assets/plugins/bootstrap-5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- custom script -->
+    <script src="/assets/script/script.js"></script>
+    <!-- chartjs -->
+    <script src="/assets/plugins/chartjs-2.9.4/Chart.min.js"></script>
+    <!-- chart demo -->
+    <script src="/assets/script/chart-demo.js"></script>
+  </body>
+</html>
