@@ -79,6 +79,13 @@ body .page-content #sidebar-wrapper .list-group-item.active {
   background: linear-gradient(270deg, #fa00ff 0%, #c200ff 0.01%, #00d1ff 100%);
   color: #fff;
 }
+body .page-content #sidebar-wrapper .list-group-item .nav-icon {
+  margin-left: 0.05rem;
+  font-size: 1.2rem;
+  margin-right: 0.2rem;
+  text-align: center;
+  width: 1.6rem;
+}
 @media (min-width: 768px) {
   body .page-content #sidebar-wrapper {
     margin-top: 0px;

@@ -99,6 +99,14 @@ body {
           );
           color: #fff;
         }
+
+        .nav-icon {
+          margin-left: 0.05rem;
+          font-size: 1.2rem;
+          margin-right: 0.2rem;
+          text-align: center;
+          width: 1.6rem;
+        }
       }
 
       @media (min-width: 768px) {
