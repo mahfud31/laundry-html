@@ -129,7 +129,7 @@
           <!-- header -->
           <div class="container-fluid">
             <div class="dashboard-heading">
-              <h2 class="dashboard-title">Pengambilan</h2>
+              <h2 class="dashboard-title">Pengeluaran</h2>
             </div>
           </div>
 
@@ -140,7 +140,77 @@
                 <!-- card -->
                 <div class="col-12">
                   <div class="card">
-                    <div class="card-body"></div>
+                    <div class="card-body">
+                      <button
+                        class="btn btn-primary mb-3"
+                        data-bs-toggle="modal"
+                        data-bs-target="#addModal"
+                      >
+                        <i class="fas fa-plus-circle"></i> Tambah
+                      </button>
+                      <div class="table-responsive">
+                        <table
+                          class="table table-hover text-center align-middle"
+                        >
+                          <thead>
+                            <tr>
+                              <th scope="col">No</th>
+                              <th scope="col">Tanggal</th>
+                              <th scope="col">Keterangan</th>
+                              <th scope="col">Nominal</th>
+                              <th scope="col">Aksi</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">1</th>
+                              <td>01-01-2023</td>
+                              <td>gajih karyawan</td>
+                              <td>Rp. 100.000</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button
+                                    class="btn btn-sm mx-1 rounded btn-danger"
+                                  >
+                                    <i class="fas fa-trash"></i>
+                                  </button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2</th>
+                              <td>02-01-2023</td>
+                              <td>beli soklik</td>
+                              <td>Rp. 50.000</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button
+                                    class="btn btn-sm mx-1 rounded btn-danger"
+                                  >
+                                    <i class="fas fa-trash"></i>
+                                  </button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">3</th>
+                              <td>03-01-2023</td>
+                              <td>beli molto</td>
+                              <td>Rp. 70.000</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button
+                                    class="btn btn-sm mx-1 rounded btn-danger"
+                                  >
+                                    <i class="fas fa-trash"></i>
+                                  </button>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -162,7 +232,7 @@
     <!-- Modal -->
     <div
       class="modal fade"
-      id="detailModal"
+      id="addModal"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
@@ -171,25 +241,61 @@
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="exampleModalLabel">
-              Detail Pengambilan
+              Tambah Pengeluaran
             </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
           </div>
-          <div class="modal-body">...</div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-          </div>
+          <form action="" method="post" class="">
+            <div class="modal-body">
+              <div class="row mb-3 justify-content-center">
+                <label
+                  for="description"
+                  class="col-4 col-md-3 text-end pr-2 col-form-label"
+                >
+                  Keterangan :
+                </label>
+                <div class="col-7">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="description"
+                    class="form-control"
+                    id="description"
+                    minlength="3"
+                    required=""
+                    autofocus=""
+                  />
+                </div>
+              </div>
+              <div class="row mb-3 justify-content-center">
+                <label
+                  for="nominal"
+                  class="col-4 col-md-3 text-end pr-2 col-form-label"
+                >
+                  Nominal :
+                </label>
+                <div class="col-7">
+                  <input
+                    type="number"
+                    class="form-control"
+                    name="nominal"
+                    class="form-control"
+                    id="nominal"
+                    minlength="9"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer ml-auto">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Batal
+              </button>
+              <button type="submit" class="btn btn-primary">Simpan</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>

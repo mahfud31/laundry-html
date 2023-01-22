@@ -14,6 +14,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+    <!-- daterangepicker -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
     <!-- custom style -->
     <link rel="stylesheet" href="/assets/style/style.css" />
     <title>Laundyku | Dashboard</title>
@@ -129,7 +134,7 @@
           <!-- header -->
           <div class="container-fluid">
             <div class="dashboard-heading">
-              <h2 class="dashboard-title">Pengambilan</h2>
+              <h2 class="dashboard-title">Laporan</h2>
             </div>
           </div>
 
@@ -140,7 +145,100 @@
                 <!-- card -->
                 <div class="col-12">
                   <div class="card">
-                    <div class="card-body"></div>
+                    <div class="card-header">
+                      <form
+                        action=""
+                        method="get"
+                        class="row justify-content-center"
+                      >
+                        <div class="px-0 m-2 col-11 col-lg-auto">
+                          <div
+                            id="reportrange"
+                            class="rounded"
+                            style="
+                              background: rgb(246, 245, 245);
+                              cursor: pointer;
+                              padding: 5px 10px;
+                              border: 1px solid #ccc;
+                              width: 100%;
+                            "
+                          >
+                            <i class="fa fa-calendar-alt"></i>&nbsp;
+                            <span>1/January/2023 - 20/January/2023</span>
+                            <i class="fa fa-caret-down"></i>
+                          </div>
+                          <input
+                            type="hidden"
+                            name="tanggal_awal"
+                            id="tanggal_awal"
+                            value="2023-01-01"
+                          />
+                          <input
+                            type="hidden"
+                            name="tanggal_akhir"
+                            id="tanggal_akhir"
+                            value="2023-01-20"
+                          />
+                        </div>
+                        <button
+                          type="submit"
+                          class="btn btn-primary col-auto m-2"
+                        >
+                          Tampilkan
+                        </button>
+                        <a
+                          href="http://kasirku.test/laporan/pdf/2023-01-01/2023-01-20"
+                          target="_blank"
+                          class="btn text-bg-info col-auto m-2 ms-auto"
+                          ><i class="fa fa-file-pdf"></i> Export PDF</a
+                        >
+                      </form>
+                    </div>
+                    <div class="card-body">
+                      <div class="table-responsive">
+                        <table
+                          class="table table-bordered table-hover text-center align-middle"
+                        >
+                          <thead>
+                            <tr>
+                              <th scope="col">No</th>
+                              <th scope="col">Tanggal</th>
+                              <th scope="col">Penjualan</th>
+                              <th scope="col">Pengeluaran</th>
+                              <th scope="col">Pendapatan</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">1</th>
+                              <td>01-01-2023</td>
+                              <td>Rp. 100.000</td>
+                              <td>Rp. 100.000</td>
+                              <td>Rp. 200.000</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2</th>
+                              <td>02-01-2023</td>
+                              <td>Rp. 100.000</td>
+                              <td>Rp. 20.000</td>
+                              <td>Rp. 80.000</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">3</th>
+                              <td>03-01-2023</td>
+                              <td>Rp. 40.000</td>
+                              <td>Rp. 0</td>
+                              <td>Rp. 40.000</td>
+                            </tr>
+                            <tr>
+                              <td colspan="3"></td>
+                              <td>Total Pendapatan</td>
+                              <td>Rp. 320.000</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -159,50 +257,53 @@
       </div>
     </div>
 
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="detailModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">
-              Detail Pengambilan
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">...</div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- jquery -->
     <script src="/assets/plugins/jquery-3.6.3/jquery.min.js"></script>
     <!-- bootstrap -->
     <script src="/assets/plugins/bootstrap-5.3.0/js/bootstrap.bundle.min.js"></script>
     <!-- custom script -->
     <script src="/assets/script/script.js"></script>
-    <!-- chartjs -->
-    <script src="/assets/plugins/chartjs-2.9.4/Chart.min.js"></script>
-    <!-- chart demo -->
-    <script src="/assets/script/chart-demo.js"></script>
+    <!-- date range picker -->
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        var start = moment().subtract(29, "days");
+        var end = moment();
+
+        function cb(start, end) {
+          $("#reportrange span").html(
+            start.format("MMMM D, YYYY") + " - " + end.format("MMMM D, YYYY")
+          );
+        }
+
+        $("#reportrange").daterangepicker(
+          {
+            startDate: start,
+            endDate: end,
+            ranges: {
+              Today: [moment(), moment()],
+              Yesterday: [
+                moment().subtract(1, "days"),
+                moment().subtract(1, "days"),
+              ],
+              "Last 7 Days": [moment().subtract(6, "days"), moment()],
+              "Last 30 Days": [moment().subtract(29, "days"), moment()],
+              "This Month": [
+                moment().startOf("month"),
+                moment().endOf("month"),
+              ],
+              "Last Month": [
+                moment().subtract(1, "month").startOf("month"),
+                moment().subtract(1, "month").endOf("month"),
+              ],
+            },
+          },
+          cb
+        );
+
+        cb(start, end);
+      });
+    </script>
   </body>
 </html>

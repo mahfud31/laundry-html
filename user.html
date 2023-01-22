@@ -129,7 +129,7 @@
           <!-- header -->
           <div class="container-fluid">
             <div class="dashboard-heading">
-              <h2 class="dashboard-title">Pengambilan</h2>
+              <h2 class="dashboard-title">User</h2>
             </div>
           </div>
 
@@ -140,7 +140,92 @@
                 <!-- card -->
                 <div class="col-12">
                   <div class="card">
-                    <div class="card-body"></div>
+                    <div class="card-body">
+                      <button
+                        class="btn btn-primary mb-3"
+                        data-bs-toggle="modal"
+                        data-bs-target="#addModal"
+                      >
+                        <i class="fas fa-plus-circle"></i> Tambah
+                      </button>
+                      <div class="table-responsive">
+                        <table
+                          class="table table-hover text-center align-middle"
+                        >
+                          <thead>
+                            <tr>
+                              <th scope="col">No</th>
+                              <th scope="col">Nama</th>
+                              <th scope="col">Email</th>
+                              <th scope="col">Posisi</th>
+                              <th scope="col">Aksi</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">1</th>
+                              <td>Mahfud</td>
+                              <td>adminlaundry@gmail.com</td>
+                              <td>Admin</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button
+                                    class="btn btn-sm mx-1 rounded btn-warning"
+                                  >
+                                    <i class="fas fa-edit"></i>
+                                  </button>
+                                  <button
+                                    class="btn btn-sm mx-1 rounded btn-danger"
+                                  >
+                                    <i class="fas fa-trash"></i>
+                                  </button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2</th>
+                              <td>Staff 1</td>
+                              <td>stafflaundry1@gmail.com</td>
+                              <td>Staff</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button
+                                    class="btn btn-sm mx-1 rounded btn-warning"
+                                  >
+                                    <i class="fas fa-edit"></i>
+                                  </button>
+                                  <button
+                                    class="btn btn-sm mx-1 rounded btn-danger"
+                                  >
+                                    <i class="fas fa-trash"></i>
+                                  </button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">3</th>
+                              <td>Staff 2</td>
+                              <td>stafflaundry2@gmail.com</td>
+                              <td>Staff</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button
+                                    class="btn btn-sm mx-1 rounded btn-warning"
+                                  >
+                                    <i class="fas fa-edit"></i>
+                                  </button>
+                                  <button
+                                    class="btn btn-sm mx-1 rounded btn-danger"
+                                  >
+                                    <i class="fas fa-trash"></i>
+                                  </button>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -162,7 +247,7 @@
     <!-- Modal -->
     <div
       class="modal fade"
-      id="detailModal"
+      id="addModal"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
@@ -170,26 +255,69 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">
-              Detail Pengambilan
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah User</h1>
           </div>
-          <div class="modal-body">...</div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-          </div>
+          <form action="" method="post" class="">
+            <div class="modal-body">
+              <div class="row mb-3 justify-content-center">
+                <label for="name" class="col-3 px-0 text-end col-form-label">
+                  Nama :
+                </label>
+                <div class="col-7">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="name"
+                    class="form-control"
+                    id="name"
+                    required=""
+                    autofocus=""
+                  />
+                </div>
+              </div>
+              <div class="row mb-3 justify-content-center">
+                <label for="email" class="col-3 px-0 text-end col-form-label">
+                  Email :
+                </label>
+                <div class="col-7">
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    class="form-control"
+                    id="email"
+                  />
+                </div>
+              </div>
+              <div class="row mb-3 justify-content-center">
+                <label
+                  for="password"
+                  class="col-3 px-0 text-end col-form-label"
+                >
+                  Password :
+                </label>
+                <div class="col-7">
+                  <input
+                    type="password"
+                    class="form-control"
+                    name="password"
+                    class="form-control"
+                    id="password"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer ml-auto">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Batal
+              </button>
+              <button type="submit" class="btn btn-primary">Simpan</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
